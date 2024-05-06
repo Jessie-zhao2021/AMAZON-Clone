@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-
+import Home from './Components/Home';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
           <Route path="/login" />
 
           {/* This is the default page */}
-          <Route path='/' />
+          <Route path='/' element={<Home />}/>
 
         </Routes>
       </div>
