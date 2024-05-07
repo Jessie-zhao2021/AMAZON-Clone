@@ -1,4 +1,21 @@
+.home_page {
+  max-width: 1500px;
+  /* min-width: 1200px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .home_poster {
     width: 100%;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    min-width: 1500px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
+    z-index: -10000;
+    margin-bottom: -345px;
+}
+
+.home_row {
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    z-index: 1;
 }
