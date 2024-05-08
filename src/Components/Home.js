@@ -103,9 +103,7 @@ function Home() {
                 image='https://m.media-amazon.com/images/I/7134lskyWnL._AC_SX522_.jpg'
               />
             </div>
-
-        </div>
-        
+        </div>        
     </div>
   )
 }
