@@ -1,0 +1,22 @@
+.checkout {
+    display: flex;
+    /* padding: 20px; */
+    background-color: white;
+}
+
+.checkout_info {
+    display: flex;
+    z-index: 100;
+}
+
+.checkout_ad {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    margin-bottom: -23%;  
+}
+
+.checkout_title {
+    margin-left: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}

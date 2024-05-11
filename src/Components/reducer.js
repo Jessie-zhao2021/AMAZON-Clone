@@ -3,8 +3,11 @@ export const initialState = {
     user: null
 }
 
+export const getCartTotal = (cart) => 
+    cart?.reduce((amount, item) => item.price + amount, 0);
+
 function reducer(state, action) {
-    console.log(state)
+    console.log('state:', state)
     switch(action.type) {
         case 'ADD_TO_CART':
             //Logic for adding item to cart
@@ -14,7 +17,16 @@ function reducer(state, action) {
             }
         case 'REMOVE_FROM_CART':
             // Logic for Removing item from cart
-            break;
+            let newCart = [...state.cart];
+            const index = state.cart.findIndex((cartItem) => cartItem.id === action.id);
+            if (index >= 0) {
+                newCart.splice(index, 1);
+
+            } else {
+                console.warn(`Cant remove product (id: ${action.id}) as its not exist`)
+            }
+            return {...state, cart: newCart};
+
         default:
             return state;
     }
