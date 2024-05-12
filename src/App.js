@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './Components/Home';
 import Checkout from './Components/Checkout';
+import Login from './Components/Login'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/checkout" element={<Checkout />}/>
 
-          <Route path="/login" />
+          <Route path="/login" element={<Login />}/>
 
           {/* This is the default page */}
           <Route path='/' element={<Home />}/>
